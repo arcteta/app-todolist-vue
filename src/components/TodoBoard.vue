@@ -1,19 +1,20 @@
-r<script setup>
+<script setup>
 import { ref } from 'vue';
 
 const todo = ref("")
 
-function clear(){
+function clear() {
     todo.value = ''
 }
+
 </script>
 
 <template>
     <h1 class="title">-= MY TODO =-</h1>
-    <form @:submit.prevent="$emit('addTodo',{ todo , clear })">
+    <form @:submit.prevent=" $emit('addTodo', { todo, clear })">
         <div class="form-control">
             <label for="todo">todo :</label>
-            <input type="text" v-model="todo" id="todo" placeholder="todo task" required>
+            <input type="text" v-model="todo" id="todo" placeholder="todo task">
         </div>
         <div style="text-align: end;">
             <button class="btn-add">add</button>
