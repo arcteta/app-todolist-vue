@@ -23,4 +23,4 @@ npm run build
 
 ### output
 
-![alt text](../app-todolist-vue/screenshot%20output/)
+![alt text](/screenshot%20output/output.png)
