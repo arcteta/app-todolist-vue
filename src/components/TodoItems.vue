@@ -11,7 +11,8 @@ import ButtonDelete from './ButtonDelete.vue';
         <div class="grid-container" v-if="todos.length > 0">
             <div class="card" v-for="item of todos" v-bind:key="item.id">
                 <div class="card-content">
-                    <h2>{{ item.todo }}</h2>
+                    <h2>{{ item.todo  }}</h2>
+                    <h2>{{ item.date  }}</h2>
                     <ButtonDelete @on-click="$emit('remove',item.id)">delete</ButtonDelete>
                 </div>
             </div>

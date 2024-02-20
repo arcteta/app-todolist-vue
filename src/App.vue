@@ -6,7 +6,7 @@ import { ref } from 'vue';
 const todos = ref([])
 
 function add(data) {
-    todos.value.push({ id: crypto.randomUUID(), todo: data.todo })
+    todos.value.push({ id: crypto.randomUUID(), todo: data.todo , date: data.date })
     data.clear()
 
     console.log(data);
