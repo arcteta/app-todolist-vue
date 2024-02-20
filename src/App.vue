@@ -1,6 +1,6 @@
 <script setup>
 import TodoBoard from './components/TodoBoard.vue';
-import TodoList from './components/TodoList.vue';
+import TodoItems from './components/TodoItems.vue';
 import { ref } from 'vue';
 
 const todos = ref([])
@@ -20,7 +20,7 @@ function remove(id){
 <template>
     <section class="wrapper">
         <TodoBoard @addTodo="add" />
-        <TodoList :todos="todos" @remove="remove"/>
+        <TodoItems :todos="todos" @remove="remove"/>
     </section>
 </template>
 

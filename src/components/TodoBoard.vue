@@ -2,6 +2,7 @@
 import { ref } from 'vue';
 
 const todo = ref("")
+const date = ref("")
 
 function clear() {
     todo.value = ''
@@ -11,10 +12,11 @@ function clear() {
 
 <template>
     <h1 class="title">-= MY TODO =-</h1>
-    <form @:submit.prevent=" $emit('addTodo', { todo, clear })">
+    <form @:submit.prevent=" $emit('addTodo', { todo , date, clear })">
         <div class="form-control">
             <label for="todo">todo :</label>
             <input type="text" v-model="todo" id="todo" placeholder="todo task">
+            <input type="date" v-model="date" id="date">
         </div>
         <div style="text-align: end;">
             <button class="btn-add">add</button>
@@ -33,7 +35,7 @@ function clear() {
 }
 
 .form-control {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .form-control label {
