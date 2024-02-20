@@ -15,9 +15,9 @@ function clear() {
     <form @:submit.prevent=" $emit('addTodo', { todo , date, clear })">
         <div class="form-control">
             <label for="todo">insert todo :</label>
-            <input type="text" v-model="todo" id="todo" placeholder="todo task">
-            <label for="date"> pick date :</label>
-            <input type="date" v-model="date" id="date">
+            <input type="text" v-model="todo" id="todo" placeholder="todo task" required>
+            <label for="date"> deadline :</label>
+            <input type="date" v-model="date" id="date" required>
         </div>
         <div style="text-align: end;">
             <button class="btn-add">ADD TODO</button>

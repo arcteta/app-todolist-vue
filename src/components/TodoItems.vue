@@ -11,8 +11,8 @@ defineProps({ todos: { type: Array, required: true } })
         <div class="grid-container" v-if="todos.length > 0">
             <div class="card" v-for="item of todos" v-bind:key="item.id">
                 <div class="card-content">
-                    <h2 class="todo-name">{{ item.todo }}</h2>
-                    <h2 class="date-name"> deadline :{{ item.date }}</h2>
+                    <h2 class="todo-name" style="padding-right: 30px;">{{ item.todo }}</h2>
+                    <h2 class="date-name" style="padding-right: 10px;"> deadline :{{ item.date }}</h2>
                     <ButtonDelete @on-click="$emit('remove', item.id)">delete</ButtonDelete>
                 </div>
             </div>
