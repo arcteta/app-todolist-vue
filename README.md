@@ -20,3 +20,7 @@ npm run dev
 ```sh
 npm run build
 ```
+
+### output
+
+![alt text](../app-todolist-vue/screenshot%20output/)
