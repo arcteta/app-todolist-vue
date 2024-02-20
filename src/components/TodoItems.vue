@@ -12,7 +12,7 @@ defineProps({ todos: { type: Array, required: true } })
             <div class="card" v-for="item of todos" v-bind:key="item.id">
                 <div class="card-content">
                     <h2 class="todo-name">{{ item.todo }}</h2>
-                    <h2 class="date-name" style="background-color: aqua;">{{ item.date }}</h2>
+                    <h2 class="date-name"> deadline :{{ item.date }}</h2>
                     <ButtonDelete @on-click="$emit('remove', item.id)">delete</ButtonDelete>
                 </div>
             </div>
